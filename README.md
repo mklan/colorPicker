@@ -23,6 +23,10 @@ e.detail.rgb carries rgb values.
     }, false);
 ```
 
+## Demo
+
+http://codepen.io/anon/pen/BjLOmZ
+
 ## Notes
 
 it doesn't work with cross-side content (in the example I used a blob file to enable local testing)
