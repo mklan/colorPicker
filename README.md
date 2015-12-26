@@ -13,7 +13,7 @@ Include the script in your project
 ## Usage
 
 call ColorPicker and pass the dom id of your source element i.e. image. After that you have to add an event listener 'colorPicked'. This event triggers, when a color was picked.
-e.detail.rgb carries rgb values.
+e.detail.rgb holds the rgb values.
 
 ```javascript
     ColorPicker(id);
