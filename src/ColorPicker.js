@@ -4,7 +4,8 @@ function ColorPicker(src, params) {
     var context = canvas.getContext('2d');
     var src = document.getElementById(src);
 
-    var listener = params.clickListener == true || false;
+    var params = params || {};
+    var listener = params.clickListener == true ? true : false;
     var ctx = this;
 
     if(listener){
