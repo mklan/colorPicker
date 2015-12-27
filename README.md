@@ -12,15 +12,24 @@ Include the script in your project
 
 ## Usage
 
-call ColorPicker and pass the dom id of your source element i.e. image. After that you have to add an event listener 'colorPicked'. This event triggers, when a color was picked.
-e.detail.rgb holds the rgb values.
+call ColorPicker and pass the dom id of your source element i.e. image. if you pass `{clickListener : true}` in the parameters, you can to add an event listener `colorPicked`. This event triggers, when a color was picked.
+`e.detail.rgb` holds the rgb values.
 
 ```javascript
-ColorPicker('mySource');
+ColorPicker('mySource', {clickListener :true});
 
 document.addEventListener('colorPicked', function (e) {
    var c = e.detail.rgb;
 }, false);
+```
+
+or you can call the `getColor(x,y)` method manually and retrieve a pixels rgb value
+
+```javascript
+var x = 50;
+var y = 50;
+var cp = ColorPicker('mySource');
+var rgb = cp.getColor(x,y);
 ```
 
 ## Demo
