@@ -1,6 +1,6 @@
 # colorPicker
 a javascript color picker. 
-Just click on your source (image, video, canvas) and retrieve the rgb values of the pixel
+Just click on your source (image, video, canvas) and retrieve the rgb values of the pixel or call the `getColor(x,y)` method.
 
 ## Installation
 
@@ -12,7 +12,7 @@ Include the script in your project
 
 ## Usage
 
-call ColorPicker and pass the dom id of your source element i.e. image. if you pass `{clickListener : true}` in the parameters, you can to add an event listener `colorPicked`. This event triggers, when a color was picked.
+call ColorPicker and pass the dom id of your source element i.e. image. if you pass `{clickListener : true}` in the parameters, you can to add an event listener `colorPicked`. This event triggers when a color was picked by clicking on the source.
 `e.detail.rgb` holds the rgb values.
 
 ```javascript
@@ -23,7 +23,7 @@ document.addEventListener('colorPicked', function (e) {
 }, false);
 ```
 
-or you can call the `getColor(x,y)` method manually and retrieve a pixels rgb value
+or you can call the `getColor(x,y)` method manually and retrieve a pixel's rgb value
 
 ```javascript
 var x = 50;
