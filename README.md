@@ -16,7 +16,7 @@ call ColorPicker and pass the dom id of your source element i.e. image. After th
 e.detail.rgb holds the rgb values.
 
 ```javascript
-    ColorPicker(id);
+    ColorPicker('mySource');
 
     document.addEventListener('colorPicked', function (e) {
        var c = e.detail.rgb;
