@@ -18,7 +18,10 @@
 
   <script src="../src/ColorPicker.js"></script>
   <script>
-  	ColorPicker('pic');
+  	var cp = ColorPicker('pic', {clickListener :true});
+
+  	var c = cp.getColor(59,59);
+  	document.getElementById('color').style.backgroundColor = "rgb("+c[0]+","+c[1]+","+c[2]+")";
 
     document.addEventListener('colorPicked', function (e) {
        var c = e.detail.rgb;
