@@ -1,3 +1,4 @@
+//MIT licence 2015 - Matthias Klan - matthias.klan@gmail.com
 function ColorPicker(src, params) {
 
     var canvas = document.createElement('canvas');
