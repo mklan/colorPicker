@@ -1,0 +1,27 @@
+{
+  "name": "ColorPicker",
+  "homepage": "https://github.com/matthiasklan/ColorPicker",
+  "authors": [
+    "Matthias Klan <matthias.klan@gmail.com>"
+  ],
+  "description": "color picker ",
+  "main": "src/ColorPicker.js",
+  "moduleType": [],
+  "keywords": [
+    "color",
+    "picker",
+    "client",
+    "js",
+    "vanilla"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "devDependencies": {
+    "mocha": "^2.4.5",
+    "chai": "^3.5.0"
+  }
+}
