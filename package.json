@@ -1,0 +1,38 @@
+{
+  "name": "ColorPicker",
+  "version": "0.1.0",
+  "description": "client-side color picking of media (images,video,canvas) ",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "set NODE_ENV=development&&webpack-dev-server --port 2104 --content-base dist --inline --hot --progress --colors",
+    "production": "set BUILD_DEV=0&&set NODE_ENV=production&&webpack --progress --colors"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthiasklan/colorPicker.git"
+  },
+  "keywords": [
+    "color",
+    "picker",
+    "client",
+    "js",
+    "vanilla"
+  ],
+  "devDependencies": {
+    "babel-loader": "^6.2.0",
+    "babel-plugin-add-module-exports": "^0.1.2",
+    "babel-plugin-transform-class-properties": "^6.3.13",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "author": "Matthias Klan <matthias.klan@gmail.com> (http://github.com/matthiasklan)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matthiasklan/colorPicker/issues"
+  },
+  "homepage": "https://github.com/matthiasklan/colorPicker/mediacropper#readme"
+}

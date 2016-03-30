@@ -1,10 +1,10 @@
 # colorPicker
-a javascript color picker. 
+a javascript color picker.
 Just click on your source (image, video, canvas) and retrieve the rgb values of the pixel or call the `getColor(x,y)` method.
 
 ## Installation
 
-Include the script in your project
+Include the script in your project or import it via ES6
 
 ```html
 <script src="/path/to/ColorPicker.js"></script>
@@ -12,39 +12,49 @@ Include the script in your project
 
 ## Usage
 
-call ColorPicker and pass the dom id of your source element i.e. image. if you pass `{clickListener : true}` in the parameters, you can to add an event listener `colorPicked`. This event triggers when a color was picked by clicking on the source.
-`e.detail.rgb` holds the rgb values.
+call ColorPicker and pass your source element i.e. image. if you pass `{clickListener : true}` in the parameters, you can to add an event listener `colorPicked`. This event triggers when a color was picked by clicking on the source.
+
 
 ```javascript
-ColorPicker('mySource', {clickListener :true});
+const mySource = document.getElementById('mySourceId');
+const cp = new ColorPicker(mySource, {clickListener :true});
 
-document.addEventListener('colorPicked', function (e) {
-   var c = e.detail.rgb;
-}, false);
+cp.on('colorPicked', (data) => {
+   console.log(data.rgb);
+});
 ```
 
 or you can call the `getColor(x,y)` method manually and retrieve a pixel's rgb value
 
 ```javascript
-var x = 50;
-var y = 50;
-var cp = ColorPicker('mySource');
-var rgb = cp.getColor(x,y);
+const x = 50;
+const y = 50;
+const mySource = document.getElementById('mySourceId');
+const cp = new ColorPicker(mySource);
+let rgb = cp.getColor(x,y);
 ```
+
+if you pass `{zoomElement : true}`, you will get a preview widget appended to you mouse. You can change the size and zoom level by passing `{zoomWindowSize : value in px}` and `{zoom : value > 0}`
+
+```javascript
+const mySource = document.getElementById('mySourceId');
+const cp = new ColorPicker(mySource, {clickListener :true, zoomElement : true, zoomWindowSize: 200, zoom: 8});
+```
+
 
 ## Demo
 
-http://codepen.io/anon/pen/BjLOmZ
+http://matthiasklan.github.io/colorpicker/
 
 ## Notes
 
-it doesn't work with cross-side content (in the example I used a blob file to enable local testing)
+it doesn't work with cross-side content (in the demo I used a blob file to enable local testing)
 
 ## Author
 
-[Matthias Klan](https://github.com/vaceta/)
+[Matthias Klan](https://github.com/matthiasklan/)
 
-contact: matthias.klan@gmail.com 
+contact: matthias.klan@gmail.com
 
 
 ## Licence
@@ -69,4 +79,3 @@ FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
