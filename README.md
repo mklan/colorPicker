@@ -7,7 +7,7 @@ Just click on your source (image, video, canvas) and retrieve the rgb values of 
 Include the script in your project or import it via ES6
 
 ```html
-<script src="/path/to/ColorPicker.js"></script>
+<script src="/path/to/dist/color-picker.js"></script>
 ```
 
 ## Usage
