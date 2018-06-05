@@ -44,7 +44,7 @@ const cp = new ColorPicker(mySource, {clickListener :true, zoomElement : true, z
 
 ## Demo
 
-http://matthiasklan.github.io/colorpicker/
+http://mklan.github.io/colorpicker/
 
 ## Notes
 
@@ -52,7 +52,7 @@ it doesn't work with cross-side content (in the demo I used a blob file to enabl
 
 ## Author
 
-[Matthias Klan](https://github.com/matthiasklan/)
+[Matthias Klan](https://github.com/mklan/)
 
 contact: matthias.klan@gmail.com
 
