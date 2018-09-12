@@ -31,11 +31,11 @@ const cp = new ColorPicker(document.getElementById('img'));
 cont rgb = cp.getColor(50,100);
 ```
 
-if you pass `{zoomElement : true}`, you will get a preview widget appended to you mouse. You can change the size and zoom level by passing `{zoomWindowSize : value in px}` and `{zoom : value > 0}`
+if you pass `{zoomElement: true}`, you will get a preview widget appended to you mouse. You can change the size and zoom level by passing `{zoomWindowSize: value in px}` and `{zoom: value > 0}`
 
 ```javascript
 const img = document.getElementById('img');
-const cp = new ColorPicker(img, {clickListener :true, zoomElement : true, zoomWindowSize: 200, zoom: 8});
+const cp = new ColorPicker(img, { clickListener: true, zoomElement: true, zoomWindowSize: 200, zoom: 8 });
 ```
 
 
