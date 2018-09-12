@@ -16,8 +16,8 @@ call ColorPicker and pass your source element i.e. image. if you pass `{clickLis
 
 
 ```javascript
-const mySource = document.getElementById('mySourceId');
-const cp = new ColorPicker(mySource, {clickListener :true});
+const img = document.getElementById('img');
+const cp = new ColorPicker(img, {clickListener :true});
 
 cp.on('colorPicked', (data) => {
    console.log(data.rgb);
@@ -27,18 +27,15 @@ cp.on('colorPicked', (data) => {
 or you can call the `getColor(x,y)` method manually and retrieve a pixel's rgb value
 
 ```javascript
-const x = 50;
-const y = 50;
-const mySource = document.getElementById('mySourceId');
-const cp = new ColorPicker(mySource);
-let rgb = cp.getColor(x,y);
+const cp = new ColorPicker(document.getElementById('img'));
+cont rgb = cp.getColor(50,100);
 ```
 
 if you pass `{zoomElement : true}`, you will get a preview widget appended to you mouse. You can change the size and zoom level by passing `{zoomWindowSize : value in px}` and `{zoom : value > 0}`
 
 ```javascript
-const mySource = document.getElementById('mySourceId');
-const cp = new ColorPicker(mySource, {clickListener :true, zoomElement : true, zoomWindowSize: 200, zoom: 8});
+const img = document.getElementById('img');
+const cp = new ColorPicker(img, {clickListener :true, zoomElement : true, zoomWindowSize: 200, zoom: 8});
 ```
 
 
